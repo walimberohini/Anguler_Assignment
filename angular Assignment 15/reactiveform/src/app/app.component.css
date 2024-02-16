@@ -1,0 +1,16 @@
+.heading{
+    color: hsla(312, 76%, 53%, 0.641);
+    text-align: center;
+}
+
+.container{
+    border: solid 1px gray;
+    width:1000px;
+}
+
+.btn{
+    background-color: hsla(312, 76%, 53%, 0.61);
+    padding:15px;
+    width:190px;
+    border: 1px solid  hsla(312, 76%, 53%, 0.61);;
+}

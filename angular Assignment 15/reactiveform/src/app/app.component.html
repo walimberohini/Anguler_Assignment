@@ -1,0 +1,128 @@
+<div class="container">
+  
+
+    <div class="row">
+
+      <div class="col-xs-12 col-12 col-md-9 form-group mb-3">
+
+        <h1 class="heading">Contact Our</h1>
+        <h1 [style.text-align]="'center'">Customer Support Center</h1>
+      </div>
+
+
+      <div class="col-xs-12 col-12 col-md-3 form-group mb-3">
+        <img src="assets/images/img1.png" width="200">
+      </div>
+    </div>
+    <form [formGroup]="MarvellousForm">
+    <div class="row">
+
+      <div class="col-xs-12 col-12 col-md-12 form-group mb-3">
+        <h5 [style.text-align]="'center'">Contact Information</h5>
+        <p [style.text-align]="'center'">Please fill out your contact information below</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        
+        <div class="col-xs-12 col-12 col-md-4 form-group mb-3">
+          <label for="email">First Name</label>
+          <input  [class.is-invalid] = "MarvellousForm.get('Fname')?.invalid " type="text" placeholder="" class="form-control" formControlName="Fname">
+          <small [class.d-none]="MarvellousForm.get('Fname')?.valid || MarvellousForm.get('Fname')?.untouched" class="text-danger">Firstname is required</small>
+          
+        </div>
+
+        <div class="col-xs-12 col-12 col-md-4 form-group mb-3">
+          <label for="email">Last Name</label>
+          <input   [class.is-invalid] = "MarvellousForm.get('Lname')?.invalid"type="text" placeholder="" class="form-control"formControlName="Lname">
+          <small [class.d-none]="MarvellousForm.get('Lname')?.valid || MarvellousForm.get('Fname')?.untouched" class="text-danger">Lastname is required</small>
+          
+        </div>
+      </div></div>
+      <div class="form-group">
+      <div class="row">
+        <p>Email<span [style.color]="'red'">*</span></p>
+        <div class="col-xs-12 col-12 col-md-12 form-group mb-3">
+
+          <input  [class.is-invalid] = "MarvellousForm.get('email')?.invalid "type="Email" placeholder="" class="form-control" formControlName="email">
+          <small [class.d-none]="MarvellousForm.get('email')?.valid || MarvellousForm.get('email')?.untouched" class="text-danger">email is required</small>
+
+        </div>
+      </div>
+    </div>
+
+      <div class="form-group">
+      <div class="row">
+        <p>Phone<span [style.color]="'red'">*</span></p>
+        <div class="col-xs-12 col-12 col-md-12 form-group mb-3">
+
+          <input [class.is-invalid] = "MarvellousForm.get('phone')?.invalid " type="Email" placeholder="" class="form-control" formControlName="phone">
+          <small [class.d-none]="MarvellousForm.get('phone')?.valid || MarvellousForm.get('phone')?.untouched" class="text-danger">phone is required</small>
+
+        </div>
+      </div>
+      </div>
+      <div class="form-group">
+      <div class="row">
+        <p>Address<span [style.color]="'red'">*</span></p>
+        <div class="col-xs-12 col-12 col-md-12 form-group mb-3">
+
+          <input [class.is-invalid] = "MarvellousForm.get('address')?.invalid " type="text" placeholder="" class="form-control" formControlName="address">
+          <small [class.d-none]="MarvellousForm.get('address')?.valid || MarvellousForm.get('address')?.untouched" class="text-danger">Address is required</small>
+
+        </div>
+      </div>
+      </div>
+
+      <div class="form-group">
+
+      <div class="row">
+
+        <div class="col-xs-12 col-12 col-md-4 form-group mb-3">
+          <label for="email">City</label>
+          <input  [class.is-invalid] = "MarvellousForm.get('city')?.invalid "type="text" placeholder="" class="form-control" formControlName="city">
+          <small [class.d-none]="MarvellousForm.get('city')?.valid || MarvellousForm.get('city')?.untouched" class="text-danger">City is required</small>
+        
+        </div>
+
+        <div class="col-xs-12 col-12 col-md-4 form-group mb-3">
+          <label for="email">state</label>
+          <input [class.is-invalid] = "MarvellousForm.get('state')?.invalid " type="text" placeholder="" class="form-control" formControlName="state">
+          <small [class.d-none]="MarvellousForm.get('state')?.valid || MarvellousForm.get('state')?.untouched" class="text-danger">state is required</small>
+          
+        </div>
+
+        <div class="col-xs-12 col-12 col-md-4 form-group mb-3">
+          <label for="email">Zip Code</label>
+          <input  [class.is-invalid] = "MarvellousForm.get('zipcode')?.invalid "type="text" placeholder="" class="form-control" formControlName="zipcode">
+          <small [class.d-none]="MarvellousForm.get('zipcode')?.valid || MarvellousForm.get('zipcode')?.untouched" class="text-danger">zipcode is required</small>
+         
+        </div>
+      </div>
+</div>
+
+<div class="form-group">
+      <div class="row">
+        <p>Comments<span [style.color]="'red'">*</span></p>
+        <div class="col-xs-12 col-12 col-md-12 form-group mb-3">
+
+          <input   [class.is-invalid] = "MarvellousForm.get('Comments')?.invalid " type="textarea" placeholder="" class="form-control" formControlName="Comments">
+          <small [class.d-none]="MarvellousForm.get('Comments')?.valid || MarvellousForm.get('Comments')?.untouched" class="text-danger">Comments is required</small>
+
+        </div>
+      </div>
+      </div>
+      <div class="form-group">
+      <div class="div text-center">
+        <button type="button" [disabled]="MarvellousForm.invalid" class="btn btn-primary"> SUBMIT FORM</button>
+      </div>
+      </div>
+    
+  </form>
+</div>
+
+
+
+
+  <router-outlet></router-outlet>
