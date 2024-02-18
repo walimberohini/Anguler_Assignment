@@ -1,0 +1,9 @@
+.heading{
+    color: blueviolet;
+    text-align: center;
+}
+
+.container{
+    border: solid 1px gray;
+    width:1000px;
+}
